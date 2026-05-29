@@ -1,0 +1,348 @@
+<!DOCTYPE html><html class="light" lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Chi tiết phòng | Room Rental</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#005049",
+                        "on-secondary-fixed": "#341100",
+                        "secondary": "#9d4300",
+                        "surface": "#f9f9ff",
+                        "outline-variant": "#c3c5d7",
+                        "tertiary-fixed": "#89f5e7",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#dce2f3",
+                        "secondary-fixed": "#ffdbca",
+                        "inverse-primary": "#b5c4ff",
+                        "surface-bright": "#f9f9ff",
+                        "surface-container": "#e7eefe",
+                        "background": "#f9f9ff",
+                        "inverse-on-surface": "#ebf1ff",
+                        "surface-tint": "#1353d8",
+                        "surface-dim": "#d3daea",
+                        "primary": "#003fb1",
+                        "on-primary-fixed": "#00174d",
+                        "primary-fixed": "#dbe1ff",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "tertiary": "#00544c",
+                        "surface-container-high": "#e2e8f8",
+                        "on-primary-container": "#d4dcff",
+                        "tertiary-fixed-dim": "#6bd8cb",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#dce2f3",
+                        "primary-fixed-dim": "#b5c4ff",
+                        "on-secondary-fixed-variant": "#783200",
+                        "surface-container-low": "#f0f3ff",
+                        "on-primary-fixed-variant": "#003dab",
+                        "on-surface-variant": "#434654",
+                        "inverse-surface": "#2a313d",
+                        "on-tertiary-container": "#84f0e2",
+                        "on-background": "#151c27",
+                        "on-tertiary-fixed": "#00201d",
+                        "secondary-fixed-dim": "#ffb690",
+                        "outline": "#737686",
+                        "tertiary-container": "#006e65",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#5c2400",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#fd761a",
+                        "primary-container": "#1a56db",
+                        "on-surface": "#151c27",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "2xl": "48px",
+                        "xs": "4px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "gutter": "24px",
+                        "3xl": "64px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-32">
+<!-- Top Navigation Header -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-margin-mobile h-16 w-full max-w-container-max mx-auto transition-all" id="detail-header">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-lowest/80 text-on-surface shadow-sm active:scale-95 transition-transform" onclick="window.history.back()">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-lowest/80 text-on-surface shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-lowest/80 text-on-surface shadow-sm active:scale-95 transition-transform" id="fav-btn">
+<span class="material-symbols-outlined" id="fav-icon">favorite</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-container-max mx-auto">
+<!-- Fullscreen Gallery -->
+<section class="relative w-full aspect-[4/5] md:aspect-video overflow-hidden">
+<div class="flex h-full transition-transform duration-500 ease-out" id="gallery-slider">
+<div class="w-full h-full flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A bright and airy modern studio apartment in Ho Chi Minh City featuring polished wooden floors, large floor-to-ceiling windows letting in soft morning light, and minimalist white furniture. The room is decorated with small green potted plants and clean-lined shelving, creating a serene and spacious urban living environment with a professional light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeRkJu12uQBCsniHeCXNZIFUkgsVlEVhPlwt37cGObU8QHsMISVYPE2dYoarYajrwEvG6e1lXe3oMjUWWMZcYG9mMGIiRzPRou2L6-LzZOfkvQq2GLLtiBDriFZnf71NcCkyIH9N2b03m77LzpLpU6Sn_S-MEItWY2hglw1vNVjXzQ_qwYlRrb2H-y-zn1CrcBPT-dr6-q-5XbKoewVAh-EpyH9OL0wOTGFpcJ8Cp2KKqr32ULYE-wV6_KgrUfAJdttKKuk8UHuBfl">
+</div>
+<div class="w-full h-full flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clean, contemporary kitchenette with white cabinetry, built-in induction stove, and a polished marble countertop. The scene is illuminated by recessed warm LED lighting that highlights the premium finishes and organized layout. The overall mood is efficient and upscale, fitting a high-end corporate rental style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoZSIE3x_tL_tlTVyUnOYVV439YiDINCdlL2HxcPRpJ3Cr2Do-spa4wy893lgwoeNUIapCXzcRlpa8ISRnYAnqUjM6LIjYBvf0AAHBrRuS50M0qta5Q2rIHothW2sDBIQTfgTVArpLE3yK3emKIP-s1WZb7GfQH5WT4L3DKDbHNjsPIixEke2iv2E2KwcwWEaQHsli41g15HKiqnGidp6c3dqUhw35EaWr9ik-IHi8Gr9c1Zru6Yemvm4mHhSYOO7xGQ-UIfA6JwvW">
+</div>
+<div class="w-full h-full flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A modern bathroom interior with textured gray tiles, a glass-enclosed walk-in shower, and a minimalist vanity with a circular mirror. Soft ambient lighting creates a spa-like atmosphere, emphasizing cleanliness and modern design details in a well-lit urban apartment setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn2RsV77V8MOv0GgA8e3ug11N7q9ggFz7R1tMHUOZHNTR9UwxMvtWFOdR6KhyV5GdUuiKTrTFRRHi0MXH5OWvt4hhYPxpYQ1qf3U4I4W_hp-kkYEyMXq0sf0ORSd2Nghcm8M9V98fJ-cChQeKTgV5IC5pIvpTkqeotEQgxLW1dQfcPRppAL9oX7XQfk2QkXRLluoweUfLRGO546judpomKaCwCC6wlFsxVLFrPlvIdth_xxenSUQ0MlSEg7o0sp92bsT7LRs3cdL0R">
+</div>
+</div>
+<!-- Gallery Indicators -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 px-3 py-1.5 rounded-full bg-black/30 backdrop-blur-md">
+<div class="w-2 h-2 rounded-full bg-white transition-all duration-300" id="dot-0"></div>
+<div class="w-2 h-2 rounded-full bg-white/40 transition-all duration-300" id="dot-1"></div>
+<div class="w-2 h-2 rounded-full bg-white/40 transition-all duration-300" id="dot-2"></div>
+</div>
+<div class="absolute bottom-6 right-margin-mobile">
+<span class="bg-black/50 text-white px-3 py-1 rounded-lg text-label-sm font-label-sm backdrop-blur-sm">1/3</span>
+</div>
+</section>
+<!-- Information Content -->
+<article class="px-margin-mobile -mt-6 relative z-10 bg-background rounded-t-3xl pt-6">
+<!-- Title & Price Header -->
+<div class="mb-lg">
+<div class="flex items-baseline gap-2 mb-xs">
+<h1 class="text-primary font-headline-lg-mobile text-headline-lg-mobile">8.500.000đ</h1>
+<span class="text-on-surface-variant text-label-md font-label-md">/ tháng</span>
+</div>
+<h2 class="text-on-surface font-title-lg text-title-lg mb-sm">Căn hộ Studio cao cấp - Vinhomes Central Park</h2>
+<p class="text-on-surface-variant flex items-center gap-1 text-label-md font-label-md">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                    Phường 22, Quận Bình Thạnh, TP. HCM
+                </p>
+</div>
+<!-- Core Specs Chips -->
+<div class="flex gap-gutter mb-lg pb-lg border-b border-outline-variant">
+<div class="flex flex-col items-center flex-1">
+<span class="material-symbols-outlined text-primary mb-1">square_foot</span>
+<span class="text-on-surface font-bold text-label-md">35 m²</span>
+<span class="text-on-surface-variant text-label-sm">Diện tích</span>
+</div>
+<div class="flex flex-col items-center flex-1 border-x border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-1">layers</span>
+<span class="text-on-surface font-bold text-label-md">Tầng 12</span>
+<span class="text-on-surface-variant text-label-sm">Vị trí</span>
+</div>
+<div class="flex flex-col items-center flex-1">
+<span class="material-symbols-outlined text-primary mb-1">explore</span>
+<span class="text-on-surface font-bold text-label-md">Đông Nam</span>
+<span class="text-on-surface-variant text-label-sm">Hướng</span>
+</div>
+</div>
+<!-- Utilities Section -->
+<section class="mb-lg">
+<h3 class="text-on-surface font-title-lg text-title-lg mb-md">Tiện ích căn hộ</h3>
+<div class="grid grid-cols-4 gap-y-lg text-center">
+<div class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">wifi</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">WiFi</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">ac_unit</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Điều hoà</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">local_parking</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Gửi xe</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">security</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">An ninh</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">dry_cleaning</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Giặt là</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">flatware</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Bếp riêng</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">elevator</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Thang máy</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">pool</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Hồ bơi</span>
+</div>
+</div>
+</section>
+<!-- Description Section -->
+<section class="mb-lg">
+<h3 class="text-on-surface font-title-lg text-title-lg mb-sm">Mô tả chi tiết</h3>
+<p class="text-on-surface-variant text-body-md font-body-md leading-relaxed">
+                    Căn hộ Studio tầng cao tại Vinhomes Central Park với thiết kế hiện đại, tối ưu không gian. Đầy đủ nội thất cao cấp: Giường, tủ, sofa, bếp, tủ lạnh, máy giặt... Khách chỉ cần xách vali vào ở. View trực diện công viên 14ha thoáng mát.
+                </p>
+<button class="mt-sm text-primary font-bold text-label-md">Xem thêm</button>
+</section>
+<!-- Location Section -->
+<section class="mb-lg">
+<div class="flex justify-between items-center mb-md">
+<h3 class="text-on-surface font-title-lg text-title-lg">Vị trí</h3>
+<button class="text-primary font-bold text-label-md">Chỉ đường</button>
+</div>
+<div class="w-full h-48 rounded-2xl overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover grayscale-[0.2]" data-alt="A detailed digital map interface showing the neighborhood of Bình Thạnh district in Ho Chi Minh City. The map is rendered in a minimalist light-mode style with soft blue and gray tones, featuring a prominent blue pin marking the property location. The visual style is professional, clean, and highly legible, emphasizing accessibility and ease of navigation." data-location="Ho Chi Minh City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXtKHfjalhb7lGi-6SfTpoC3QL6BLrQT9PvKiLpkZq94gZMRi12aEhHimswKKJyuIss3dqPBma345UFgfgBdfzQmds4KqkbxRxwF1XZkZAYwQcLUwduBOfUtRsPLn2kTlB-HP3hRTB6Ktb91H7xOUGXg6F1TUFPaCnuK62NIal7M85WIIYd8FIuBwbXweugTWJA3You73kzW4mgO1KcVQQNavYP3Yjprb_Pbveu5_SqVUqobKUjudOOUlxN2jLYWQQxrKFav1R9Xek">
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center animate-pulse">
+<div class="w-4 h-4 rounded-full bg-primary border-2 border-white"></div>
+</div>
+</div>
+</div>
+</section>
+</article>
+</main>
+<!-- Bottom Sticky CTA Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface dark:bg-background shadow-[0px_-8px_24px_rgba(0,0,0,0.08)] px-margin-mobile pt-3 pb-safe flex gap-3 h-20 items-center max-w-container-max mx-auto left-1/2 -translate-x-1/2">
+<button class="flex-1 flex items-center justify-center gap-2 border-2 border-primary text-primary font-bold py-3 rounded-xl active:scale-95 transition-all">
+<span class="material-symbols-outlined">call</span>
+            Gọi điện
+        </button>
+<button class="flex-[1.5] flex items-center justify-center gap-2 bg-secondary text-white font-bold py-3.5 rounded-xl shadow-lg shadow-secondary/20 active:scale-95 transition-all">
+<span class="material-symbols-outlined">calendar_month</span>
+            Đặt lịch xem
+        </button>
+</nav>
+<script>
+        // Header Scroll Effect
+        const header = document.getElementById('detail-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('bg-surface/90', 'backdrop-blur-md', 'shadow-sm');
+                header.classList.remove('bg-transparent');
+            } else {
+                header.classList.remove('bg-surface/90', 'backdrop-blur-md', 'shadow-sm');
+                header.classList.add('bg-transparent');
+            }
+        });
+
+        // Simple Gallery Logic
+        const slider = document.getElementById('gallery-slider');
+        const dots = [document.getElementById('dot-0'), document.getElementById('dot-1'), document.getElementById('dot-2')];
+        let currentIdx = 0;
+
+        function updateDots() {
+            dots.forEach((dot, i) => {
+                if (i === currentIdx) {
+                    dot.classList.remove('bg-white/40', 'w-2');
+                    dot.classList.add('bg-white', 'w-4');
+                } else {
+                    dot.classList.add('bg-white/40', 'w-2');
+                    dot.classList.remove('bg-white', 'w-4');
+                }
+            });
+        }
+
+        // Auto-slide for demo
+        setInterval(() => {
+            currentIdx = (currentIdx + 1) % 3;
+            slider.style.transform = `translateX(-${currentIdx * 100}%)`;
+            updateDots();
+        }, 4000);
+
+        // Favorite Toggle
+        const favBtn = document.getElementById('fav-btn');
+        const favIcon = document.getElementById('fav-icon');
+        let isFav = false;
+        favBtn.addEventListener('click', () => {
+            isFav = !isFav;
+            favIcon.style.fontVariationSettings = isFav ? "'FILL' 1" : "'FILL' 0";
+            favIcon.classList.toggle('text-error', isFav);
+            favBtn.classList.add('scale-125');
+            setTimeout(() => favBtn.classList.remove('scale-125'), 150);
+        });
+
+        // Touch Swipe Simulation (Visual only)
+        let startX = 0;
+        slider.addEventListener('touchstart', (e) => startX = e.touches[0].clientX);
+        slider.addEventListener('touchend', (e) => {
+            let endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) { // Swipe Left
+                currentIdx = Math.min(currentIdx + 1, 2);
+            } else if (endX - startX > 50) { // Swipe Right
+                currentIdx = Math.max(currentIdx - 1, 0);
+            }
+            slider.style.transform = `translateX(-${currentIdx * 100}%)`;
+            updateDots();
+        });
+
+        // Initial state
+        updateDots();
+    </script>
+</body></html>

@@ -1,0 +1,9 @@
+{
+    "name": "HOSTY - Khách thuê",
+    "short_name": "HOSTY",
+    "start_url": "/khach",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2563EB",
+    "icons": []
+}

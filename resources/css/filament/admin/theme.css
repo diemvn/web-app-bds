@@ -1,0 +1,36 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+:root {
+    --primary-500: 255 90 95;
+    --primary-600: 232 78 82;
+    --radius-lg: 1rem;
+}
+
+.fi-sidebar {
+    @apply bg-white border-r border-gray-100;
+}
+
+.fi-main {
+    @apply bg-[#f7f7f7];
+}
+
+.fi-wi-stats-overview-stat {
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+    border: 1px solid rgb(243 244 246);
+}
+
+.fi-section-content,
+.fi-ta-ctn {
+    border-radius: 1rem;
+}
+
+/* Section form padding — tối đa 16px (thay calc(var(--spacing) * 6)) */
+.fi-section:not(.fi-section-not-contained):not(.fi-divided)
+    > .fi-section-content-ctn
+    > .fi-section-content {
+    padding: 16px;
+}

@@ -1,0 +1,137 @@
+﻿{
+    "id":  2,
+    "jsonrpc":  "2.0",
+    "result":  {
+                   "content":  [
+                                   {
+                                       "text":  "{\"screens\":[{\"name\":\"projects/10957452606187217579/screens/f4e889aa64674b2d97acf5c89881d30a\",\"title\":\"Chi tiết phòng\",\"screenshot\":{\"name\":\"projects/10957452606187217579/files/14827782932284298744\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/ADBb0ugADRDfjhUmRNYU2yomKva0p5rfsQktmoXW1BjYnwfVqk9qZFWmTcadWSHEzkHD9WFE0hxQ6o-LQ_jSTG-9n2sF2gxLup0GUuXsTfOTkEi6FUzVfG1lqUAfYdsdtf-KS-OsEwVxwHY-GLb3EqYNFx-KkkdSCxVU1Iun80V5oaD85j39WMic6TIkLwsCSbhGpi4eqvFMfoX8YEUTGX42WKnUENZ4Uvd_tIanI3Z1ohsiHh9HYArcW_w-tpHA\"},\"htmlCode\":{\"name\":\"projects/10957452606187217579/files/16299208500792862096\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1MmQ4MGIyZTQ1YWQwMzM4NWE4NzU5MmQ2ZGNjEgsSBxDQ7eKJhwoYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDk1NzQ1MjYwNjE4NzIxNzU3OQ\u0026filename=\u0026opi=89354086\",\"mimeType\":\"text/html\"},\"width\":\"780\",\"height\":\"3160\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/10957452606187217579/screens/4424732fcb7a4efd9304e92e6dcbcc6e\",\"title\":\"Bộ lọc tìm kiếm\",\"screenshot\":{\"name\":\"projects/10957452606187217579/files/2217435178131481976\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/ADBb0uiblPZ6isOqtO3Ip0OS4CzuaRU2hz9GHEEwqQYYvaLyE1aPORvz5DtBlKMQQy8Cn3bxRZul7dqrw5JVuA7ACIwuPGntiQ9qh55KJRg46e7mkHKsQ3RQOBRTUXeSrlO5ly-mHWVJvRU0HW8J3TWlBqX6hM5IDpVE4Vmxuy5dTyh-1GqEXi_RO_Y-8HaG4DNzuJZ1XStecAUPt6BzjFYupoyDB_-kmc_CBV9zuvRoAD9BEmaVZ0cNudkdLiBi\"},\"htmlCode\":{\"name\":\"projects/10957452606187217579/files/17747875186447329677\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1MmQ4MGIzYThkNWIwMmE5YjdlMTk2MzczNWQ2EgsSBxDQ7eKJhwoYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDk1NzQ1MjYwNjE4NzIxNzU3OQ\u0026filename=\u0026opi=89354086\",\"mimeType\":\"text/html\"},\"width\":\"780\",\"height\":\"1936\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/10957452606187217579/screens/4cd6bf5b9f6843189b406a34572a0682\",\"title\":\"Trang chủ - Danh sách phòng\",\"screenshot\":{\"name\":\"projects/10957452606187217579/files/4141578984880110812\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/ADBb0uhGS41zeQPq9Kn4zldbKulEM1yecT2rX1d8DQD1FlVftxe3PfVl0zNOwjIpI6FaOMHUEBvTe7YlxzFf7eFITUfftcanAVIYWPgSZZaUXOmZVXFbLx5XUhbSmBN11EpyumldZ4P8qGlyaB29VeqMBam5WoznbI29YlC5pFXZixA21Z4xtu8OobrWxXHWtD8Z40HT6pS9Y8bedY85LbqANr5x3tl8u0u17RaxxqDUtEh73Sc_OpPWxhkXfiFN\"},\"htmlCode\":{\"name\":\"projects/10957452606187217579/files/16375768392227750580\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1MmQ4MGIyMmE4NmEwOTI1YzdiZTMyMDUzNDEzEgsSBxDQ7eKJhwoYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDk1NzQ1MjYwNjE4NzIxNzU3OQ\u0026filename=\u0026opi=89354086\",\"mimeType\":\"text/html\"},\"width\":\"780\",\"height\":\"2782\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/10957452606187217579/screens/7368208097463547457\",\"title\":\"image.png\",\"screenshot\":{\"name\":\"projects/10957452606187217579/files/7368208097463549902\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/ADBb0uhHYo0I6kxiq6czn9qL92_ShcMM89jan2MQXCL0bTFNia2X-TSB-zuJjcpHqak3tfyojnofRVPjx7KD3KXcVwryjXxrDvB4XJIuqRFSL_lHyApr29eBdAd3a4nnUV5yc6ItposPcXJnFx0sMjbqHjms8bSLQIto4EwviO2JiQZaL7Y0nv6hOdOuvS_Kg3EJhjf93J4_R4_rTCEAPxX0W2HAlVfJmzhJbiIlI-UI9f9RoOtEfl5TMlM_aq4M8dTw_UWpKmjGfyBZ4O8\"},\"htmlCode\":{},\"width\":\"1847\",\"height\":\"956\"},{\"name\":\"projects/10957452606187217579/screens/079da239e9244164854cba11552477dc\",\"title\":\"ThuePhongVN - Room Rental Flow\",\"screenshot\":{},\"htmlCode\":{\"name\":\"projects/10957452606187217579/files/d26768a4cf06414e9f57acba121ecf38\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzEzYzRlZDNjMTI2NDQ0YTI5Mzg1ZmY0ODE4NjljYWQ1EgsSBxDQ7eKJhwoYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDk1NzQ1MjYwNjE4NzIxNzU3OQ\u0026filename=\u0026opi=89354086\",\"mimeType\":\"text/html\"},\"width\":\"390\",\"height\":\"884\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/10957452606187217579/screens/6980786520648489878\",\"title\":\"image.png\",\"screenshot\":{\"name\":\"projects/10957452606187217579/files/6980786520648489391\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/ADBb0uiy4hcN_gB_mxEUu4dL-nvM0m0mYDA5FgIVt3WLrcXcMhL958ILn2xHaWOiosASPuOxwvb6S2q4zVDYXKbt-FOSd_406OAwpkhor-GKWr59r66Hhs70IeiyiD5Gz2Dvnlqis0qnYDDks7RDH5mex9JQ22udduYQxClLdGJR1EjXFDob5PMI4u8hSblDYFUTLCf7Ra_WUtmTLZ4arKWybu21nMuiol2Ds1Ay-UBkcDXkLDg_nPPJMSzQl4aUGpRjRqkEZzhxBo2X7A\"},\"htmlCode\":{},\"width\":\"837\",\"height\":\"788\"},{\"name\":\"projects/10957452606187217579/screens/1a441dbec609405aafddc533b6af561d\",\"title\":\"Bản đồ \u0026 Danh sách - Desktop (Zillow Style)\",\"screenshot\":{\"name\":\"projects/10957452606187217579/files/4606789891620724226\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/ADBb0ug2YhJmFZSekQcuyzcEsyMFdhYcAqzvPwtDu1vyvt86MbOae_IgdkNTkbogCisGTH97XoG67JuOj4jBlikuUSwwTcgUZp25p7Rxj-h7rbXu6ru9qJJpw7fYXKTChpNXeH1PkEM1vRVcy1BP8Nnx-0Qsx7wT9DB4WD7D8NOipYB7axGGLYf5AK7wvNDedo4PkKCE448nSWuvE0-1N1FWci0s853f95j33HxqKwm6avw1ObwHdeJPeVpfSGDL\"},\"htmlCode\":{\"name\":\"projects/10957452606187217579/files/6764115054266522493\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1MmQ4MDYzOTlmOWYwMjJkNDQ0NjJiMTM4ODJjEgsSBxDQ7eKJhwoYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDk1NzQ1MjYwNjE4NzIxNzU3OQ\u0026filename=\u0026opi=89354086\",\"mimeType\":\"text/html\"},\"width\":\"2560\",\"height\":\"2048\",\"deviceType\":\"DESKTOP\"},{\"name\":\"projects/10957452606187217579/screens/08235af105a64001b458f72b929ed382\",\"title\":\"Liên hệ \u0026 Đặt lịch\",\"screenshot\":{\"name\":\"projects/10957452606187217579/files/546743999790607656\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/ADBb0uiSRitjvGz8szjAgYKpVky5mpN61tf2h0x16bpq9zoCwxKiueO36M17VLcZlZ4Ey7p5XGKkM_ApwRryqAHjaGqQ8SldMtUrBNd_g1NqdYsXm2884NfoGZqArZ3BrjXWkOuz6eOoKbb3QnwpZc2bw3eEGirxfvV--YR7gwn0XUZQvjN--l-Y6oOXKkuzZOxqKzt7WRPaDedd4MuoaYIrs_N7fimZ4eHQ3H7GINwfCAZhHKFmL7wA7iE38xTS\"},\"htmlCode\":{\"name\":\"projects/10957452606187217579/files/3788247271561444512\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1MmQ4MGI0YmNmNjEwMmQzZmUxY2JlM2JiYWNiEgsSBxDQ7eKJhwoYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDk1NzQ1MjYwNjE4NzIxNzU3OQ\u0026filename=\u0026opi=89354086\",\"mimeType\":\"text/html\"},\"width\":\"780\",\"height\":\"2304\",\"deviceType\":\"MOBILE\"}]}",
+                                       "type":  "text"
+                                   }
+                               ],
+                   "structuredContent":  {
+                                             "screens":  [
+                                                             {
+                                                                 "deviceType":  "MOBILE",
+                                                                 "height":  "3160",
+                                                                 "htmlCode":  {
+                                                                                  "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1MmQ4MGIyZTQ1YWQwMzM4NWE4NzU5MmQ2ZGNjEgsSBxDQ7eKJhwoYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDk1NzQ1MjYwNjE4NzIxNzU3OQ\u0026filename=\u0026opi=89354086",
+                                                                                  "mimeType":  "text/html",
+                                                                                  "name":  "projects/10957452606187217579/files/16299208500792862096"
+                                                                              },
+                                                                 "name":  "projects/10957452606187217579/screens/f4e889aa64674b2d97acf5c89881d30a",
+                                                                 "screenshot":  {
+                                                                                    "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ugADRDfjhUmRNYU2yomKva0p5rfsQktmoXW1BjYnwfVqk9qZFWmTcadWSHEzkHD9WFE0hxQ6o-LQ_jSTG-9n2sF2gxLup0GUuXsTfOTkEi6FUzVfG1lqUAfYdsdtf-KS-OsEwVxwHY-GLb3EqYNFx-KkkdSCxVU1Iun80V5oaD85j39WMic6TIkLwsCSbhGpi4eqvFMfoX8YEUTGX42WKnUENZ4Uvd_tIanI3Z1ohsiHh9HYArcW_w-tpHA",
+                                                                                    "name":  "projects/10957452606187217579/files/14827782932284298744"
+                                                                                },
+                                                                 "title":  "Chi tiết phòng",
+                                                                 "width":  "780"
+                                                             },
+                                                             {
+                                                                 "deviceType":  "MOBILE",
+                                                                 "height":  "1936",
+                                                                 "htmlCode":  {
+                                                                                  "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1MmQ4MGIzYThkNWIwMmE5YjdlMTk2MzczNWQ2EgsSBxDQ7eKJhwoYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDk1NzQ1MjYwNjE4NzIxNzU3OQ\u0026filename=\u0026opi=89354086",
+                                                                                  "mimeType":  "text/html",
+                                                                                  "name":  "projects/10957452606187217579/files/17747875186447329677"
+                                                                              },
+                                                                 "name":  "projects/10957452606187217579/screens/4424732fcb7a4efd9304e92e6dcbcc6e",
+                                                                 "screenshot":  {
+                                                                                    "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0uiblPZ6isOqtO3Ip0OS4CzuaRU2hz9GHEEwqQYYvaLyE1aPORvz5DtBlKMQQy8Cn3bxRZul7dqrw5JVuA7ACIwuPGntiQ9qh55KJRg46e7mkHKsQ3RQOBRTUXeSrlO5ly-mHWVJvRU0HW8J3TWlBqX6hM5IDpVE4Vmxuy5dTyh-1GqEXi_RO_Y-8HaG4DNzuJZ1XStecAUPt6BzjFYupoyDB_-kmc_CBV9zuvRoAD9BEmaVZ0cNudkdLiBi",
+                                                                                    "name":  "projects/10957452606187217579/files/2217435178131481976"
+                                                                                },
+                                                                 "title":  "Bộ lọc tìm kiếm",
+                                                                 "width":  "780"
+                                                             },
+                                                             {
+                                                                 "deviceType":  "MOBILE",
+                                                                 "height":  "2782",
+                                                                 "htmlCode":  {
+                                                                                  "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1MmQ4MGIyMmE4NmEwOTI1YzdiZTMyMDUzNDEzEgsSBxDQ7eKJhwoYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDk1NzQ1MjYwNjE4NzIxNzU3OQ\u0026filename=\u0026opi=89354086",
+                                                                                  "mimeType":  "text/html",
+                                                                                  "name":  "projects/10957452606187217579/files/16375768392227750580"
+                                                                              },
+                                                                 "name":  "projects/10957452606187217579/screens/4cd6bf5b9f6843189b406a34572a0682",
+                                                                 "screenshot":  {
+                                                                                    "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0uhGS41zeQPq9Kn4zldbKulEM1yecT2rX1d8DQD1FlVftxe3PfVl0zNOwjIpI6FaOMHUEBvTe7YlxzFf7eFITUfftcanAVIYWPgSZZaUXOmZVXFbLx5XUhbSmBN11EpyumldZ4P8qGlyaB29VeqMBam5WoznbI29YlC5pFXZixA21Z4xtu8OobrWxXHWtD8Z40HT6pS9Y8bedY85LbqANr5x3tl8u0u17RaxxqDUtEh73Sc_OpPWxhkXfiFN",
+                                                                                    "name":  "projects/10957452606187217579/files/4141578984880110812"
+                                                                                },
+                                                                 "title":  "Trang chủ - Danh sách phòng",
+                                                                 "width":  "780"
+                                                             },
+                                                             {
+                                                                 "height":  "956",
+                                                                 "htmlCode":  {
+
+                                                                              },
+                                                                 "name":  "projects/10957452606187217579/screens/7368208097463547457",
+                                                                 "screenshot":  {
+                                                                                    "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0uhHYo0I6kxiq6czn9qL92_ShcMM89jan2MQXCL0bTFNia2X-TSB-zuJjcpHqak3tfyojnofRVPjx7KD3KXcVwryjXxrDvB4XJIuqRFSL_lHyApr29eBdAd3a4nnUV5yc6ItposPcXJnFx0sMjbqHjms8bSLQIto4EwviO2JiQZaL7Y0nv6hOdOuvS_Kg3EJhjf93J4_R4_rTCEAPxX0W2HAlVfJmzhJbiIlI-UI9f9RoOtEfl5TMlM_aq4M8dTw_UWpKmjGfyBZ4O8",
+                                                                                    "name":  "projects/10957452606187217579/files/7368208097463549902"
+                                                                                },
+                                                                 "title":  "image.png",
+                                                                 "width":  "1847"
+                                                             },
+                                                             {
+                                                                 "deviceType":  "MOBILE",
+                                                                 "height":  "884",
+                                                                 "htmlCode":  {
+                                                                                  "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzEzYzRlZDNjMTI2NDQ0YTI5Mzg1ZmY0ODE4NjljYWQ1EgsSBxDQ7eKJhwoYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDk1NzQ1MjYwNjE4NzIxNzU3OQ\u0026filename=\u0026opi=89354086",
+                                                                                  "mimeType":  "text/html",
+                                                                                  "name":  "projects/10957452606187217579/files/d26768a4cf06414e9f57acba121ecf38"
+                                                                              },
+                                                                 "name":  "projects/10957452606187217579/screens/079da239e9244164854cba11552477dc",
+                                                                 "screenshot":  {
+
+                                                                                },
+                                                                 "title":  "ThuePhongVN - Room Rental Flow",
+                                                                 "width":  "390"
+                                                             },
+                                                             {
+                                                                 "height":  "788",
+                                                                 "htmlCode":  {
+
+                                                                              },
+                                                                 "name":  "projects/10957452606187217579/screens/6980786520648489878",
+                                                                 "screenshot":  {
+                                                                                    "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0uiy4hcN_gB_mxEUu4dL-nvM0m0mYDA5FgIVt3WLrcXcMhL958ILn2xHaWOiosASPuOxwvb6S2q4zVDYXKbt-FOSd_406OAwpkhor-GKWr59r66Hhs70IeiyiD5Gz2Dvnlqis0qnYDDks7RDH5mex9JQ22udduYQxClLdGJR1EjXFDob5PMI4u8hSblDYFUTLCf7Ra_WUtmTLZ4arKWybu21nMuiol2Ds1Ay-UBkcDXkLDg_nPPJMSzQl4aUGpRjRqkEZzhxBo2X7A",
+                                                                                    "name":  "projects/10957452606187217579/files/6980786520648489391"
+                                                                                },
+                                                                 "title":  "image.png",
+                                                                 "width":  "837"
+                                                             },
+                                                             {
+                                                                 "deviceType":  "DESKTOP",
+                                                                 "height":  "2048",
+                                                                 "htmlCode":  {
+                                                                                  "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1MmQ4MDYzOTlmOWYwMjJkNDQ0NjJiMTM4ODJjEgsSBxDQ7eKJhwoYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDk1NzQ1MjYwNjE4NzIxNzU3OQ\u0026filename=\u0026opi=89354086",
+                                                                                  "mimeType":  "text/html",
+                                                                                  "name":  "projects/10957452606187217579/files/6764115054266522493"
+                                                                              },
+                                                                 "name":  "projects/10957452606187217579/screens/1a441dbec609405aafddc533b6af561d",
+                                                                 "screenshot":  {
+                                                                                    "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ug2YhJmFZSekQcuyzcEsyMFdhYcAqzvPwtDu1vyvt86MbOae_IgdkNTkbogCisGTH97XoG67JuOj4jBlikuUSwwTcgUZp25p7Rxj-h7rbXu6ru9qJJpw7fYXKTChpNXeH1PkEM1vRVcy1BP8Nnx-0Qsx7wT9DB4WD7D8NOipYB7axGGLYf5AK7wvNDedo4PkKCE448nSWuvE0-1N1FWci0s853f95j33HxqKwm6avw1ObwHdeJPeVpfSGDL",
+                                                                                    "name":  "projects/10957452606187217579/files/4606789891620724226"
+                                                                                },
+                                                                 "title":  "Bản đồ \u0026 Danh sách - Desktop (Zillow Style)",
+                                                                 "width":  "2560"
+                                                             },
+                                                             {
+                                                                 "deviceType":  "MOBILE",
+                                                                 "height":  "2304",
+                                                                 "htmlCode":  {
+                                                                                  "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1MmQ4MGI0YmNmNjEwMmQzZmUxY2JlM2JiYWNiEgsSBxDQ7eKJhwoYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDk1NzQ1MjYwNjE4NzIxNzU3OQ\u0026filename=\u0026opi=89354086",
+                                                                                  "mimeType":  "text/html",
+                                                                                  "name":  "projects/10957452606187217579/files/3788247271561444512"
+                                                                              },
+                                                                 "name":  "projects/10957452606187217579/screens/08235af105a64001b458f72b929ed382",
+                                                                 "screenshot":  {
+                                                                                    "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0uiSRitjvGz8szjAgYKpVky5mpN61tf2h0x16bpq9zoCwxKiueO36M17VLcZlZ4Ey7p5XGKkM_ApwRryqAHjaGqQ8SldMtUrBNd_g1NqdYsXm2884NfoGZqArZ3BrjXWkOuz6eOoKbb3QnwpZc2bw3eEGirxfvV--YR7gwn0XUZQvjN--l-Y6oOXKkuzZOxqKzt7WRPaDedd4MuoaYIrs_N7fimZ4eHQ3H7GINwfCAZhHKFmL7wA7iE38xTS",
+                                                                                    "name":  "projects/10957452606187217579/files/546743999790607656"
+                                                                                },
+                                                                 "title":  "Liên hệ \u0026 Đặt lịch",
+                                                                 "width":  "780"
+                                                             }
+                                                         ]
+                                         }
+               }
+}

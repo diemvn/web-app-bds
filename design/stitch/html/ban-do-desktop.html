@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ThuePhongVN - Tìm kiếm phòng trọ &amp; căn hộ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#1a56db",
+                        "on-primary": "#ffffff",
+                        "surface": "#f9f9ff",
+                        "surface-dim": "#d3daea",
+                        "surface-bright": "#f9f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f0f3ff",
+                        "surface-container": "#e7eefe",
+                        "surface-container-high": "#e2e8f8",
+                        "surface-container-highest": "#dce2f3",
+                        "on-surface": "#151c27",
+                        "on-surface-variant": "#434654",
+                        "outline": "#737686",
+                        "outline-variant": "#c3c5d7",
+                        "secondary-container": "#fd761a",
+                        "on-secondary-container": "#5c2400"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "8px",
+                        "lg": "12px",
+                        "xl": "16px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "sans": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .map-gradient {
+            background: radial-gradient(circle at 50% 50%, #f0f3ff 0%, #dce2f3 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex flex-col h-screen overflow-hidden">
+<!-- 1. Top Navigation (Zillow Style) -->
+<header class="flex-none bg-surface-container-lowest border-b border-outline-variant px-lg h-16 flex items-center justify-between z-50">
+<div class="flex items-center gap-xl">
+<span class="text-xl font-bold text-primary tracking-tight">ThuePhongVN</span>
+<nav class="hidden lg:flex items-center gap-md">
+
+
+
+
+
+</nav>
+</div>
+<div class="flex items-center gap-md"><button class="text-on-surface hover:text-primary transition-colors flex items-center p-2">
+  <span class="material-symbols-outlined">favorite</span>
+</button>
+
+
+<button class="hidden md:block font-medium text-on-surface hover:text-primary">Trợ giúp</button>
+
+<button class="font-medium text-on-surface hover:text-primary px-2 transition-colors">Đăng nhᄩp</button></div>
+</header>
+<!-- 2. Search & Filter Bar (Zillow Style) -->
+<div class="flex-none bg-surface-container-lowest border-b border-outline-variant px-lg py-sm flex flex-wrap items-center gap-sm z-40">
+<div class="relative flex-1 max-w-md">
+<input class="w-full pl-md pr-10 py-2 border border-outline-variant rounded focus:ring-1 focus:ring-primary focus:border-primary outline-none" placeholder="Địa chỉ, khu phố, thành phố, mã vùng..." type="text">
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline">search</span>
+</div>
+<div class="flex items-center gap-sm">
+<button class="flex items-center gap-xs px-md py-2 border border-outline-variant rounded hover:bg-surface-container transition-colors">
+<span class="font-medium text-sm">Cho thuê</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex items-center gap-xs px-md py-2 border border-outline-variant rounded hover:bg-surface-container transition-colors">
+<span class="font-medium text-sm">Giá</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex items-center gap-xs px-md py-2 border border-outline-variant rounded hover:bg-surface-container transition-colors">
+<span class="font-medium text-sm">Giường &amp; Tắm</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex items-center gap-xs px-md py-2 border border-outline-variant rounded hover:bg-surface-container transition-colors">
+<span class="font-medium text-sm">Loại nhà</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex items-center gap-xs px-md py-2 border border-outline-variant rounded hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span class="font-medium text-sm">Bộ lọc</span>
+</button>
+</div>
+<div class="ml-auto">
+<button class="bg-primary text-on-primary px-lg py-2 rounded font-semibold hover:bg-opacity-90">Lưu tìm kiếm</button>
+</div>
+</div>
+<!-- 3. Split Screen Layout -->
+<main class="flex-1 flex overflow-hidden">
+<!-- Left Side: Map Area (~65%) -->
+<section class="relative w-[65%] h-full bg-surface-variant map-gradient border-r border-outline-variant">
+<div class="absolute inset-0 z-0 opacity-50" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCUeB4sOXT2hY5zrWZV8R1p8Dsh70lWLFq-1J2Nq3ih3TRDYjg8rO5hRLO_SXcDBsi7oyoPcT9BuNge8MnhjSkjfFNxRyYaYuj1A9pKfSZYQU_Eg5zaMWIkLN7sfcf2r4WPc9B11euoC-YdzIEk63E6OGMOB1AVFvrZq_vE9J4QMnDCTVkMpX2HfOdsP1ENrKe5GXZaNl6kzJLY2ktQBQDyPEGqdqiAr0ULH7gcNhAOx3EVvpKFWGmsl_cTv6sRySL61pnwUwpaGbZe&quot;); background-size: cover;"></div>
+<!-- Search in this area button -->
+<div class="absolute top-md left-1/2 -translate-x-1/2 z-10">
+<button class="bg-surface-container-lowest shadow-lg border border-outline-variant px-lg py-2 rounded-full flex items-center gap-sm hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">refresh</span>
+<span class="font-semibold text-sm">Tìm kiếm trong khu vực này</span>
+</button>
+</div>
+<!-- Price Markers -->
+<div class="absolute top-[25%] left-[35%] z-10">
+<button class="bg-primary text-on-primary px-3 py-1 rounded shadow-md font-bold text-xs hover:scale-110 transition-transform">5.5tr</button>
+</div>
+<div class="absolute top-[48%] left-[52%] z-10">
+<button class="bg-primary text-on-primary px-3 py-1 rounded shadow-md font-bold text-xs hover:scale-110 transition-transform">8.2tr</button>
+</div>
+<div class="absolute top-[65%] left-[42%] z-10">
+<button class="bg-primary text-on-primary px-3 py-1 rounded shadow-md font-bold text-xs hover:scale-110 transition-transform">4.5tr</button>
+</div>
+<div class="absolute top-[38%] left-[70%] z-10">
+<button class="bg-secondary-container text-on-primary px-3 py-1 rounded shadow-md font-bold text-xs hover:scale-110 transition-transform">12.0tr</button>
+</div>
+<!-- Map Controls -->
+<div class="absolute bottom-md right-md z-10 flex flex-col gap-2">
+<div class="flex flex-col bg-surface-container-lowest shadow-lg rounded border border-outline-variant overflow-hidden">
+<button class="p-2 hover:bg-surface-container border-b border-outline-variant">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="p-2 hover:bg-surface-container">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+<button class="bg-surface-container-lowest p-2 shadow-lg rounded border border-outline-variant hover:bg-surface-container">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+</section>
+<!-- Right Side: Property Feed (~35%) -->
+<section class="w-[35%] h-full bg-surface-container-lowest flex flex-col overflow-hidden">
+<!-- Feed Header -->
+<div class="p-lg border-b border-outline-variant flex flex-col gap-1 bg-surface-container-lowest sticky top-0 z-20">
+<h1 class="text-xl font-bold text-on-surface">Bản đồ toàn cảnh: Ho Chi Minh Real Estate</h1>
+<div class="flex items-center justify-between mt-1">
+<span class="text-on-surface-variant text-sm font-medium">65 kết quả</span>
+<div class="flex items-center gap-xs cursor-pointer hover:text-primary group">
+<span class="text-sm font-semibold">Sắp xếp: Phù hợp nhất</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-y-0.5 transition-transform">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Property Grid -->
+<div class="flex-1 overflow-y-auto p-md hide-scrollbar">
+<div class="grid grid-cols-1 @xl:grid-cols-2 gap-md">
+<!-- Card 1 -->
+<div class="group border border-outline-variant rounded-lg overflow-hidden bg-surface-container-lowest hover:shadow-lg transition-all cursor-pointer">
+<div class="relative aspect-video overflow-hidden">
+<img alt="Studio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4FQmcQG1dlexPQoKo0ZxngqXGuj62m_vr8cH4CPg59EmjpQsmoIxneiP8XeMXj4NyDjsVMxsIeh94B3XdFUIjL1h8dHeZDu6CaTHMuLnVecffCAnh96PyIbSp0Sw6ts12cjtYCVl40feM9C8SPnibo1h4v2WOTCCrSEEOVtrGAArKEdVVw4jPg5ieFLVCQc51DmpvJ0gxSjfm1GsprVEsysJpJ-0f9vVNaN3guckm9fjes6ppJXXsFuQUaznRLv5M-PPzMoNlYMTR">
+<button class="absolute top-2 right-2 text-white hover:text-red-500 drop-shadow-md">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</button>
+<div class="absolute bottom-2 left-2 bg-primary text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase">Showcase</div>
+</div>
+<div class="p-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold">8.2tr <span class="text-sm font-normal">/tháng</span></span>
+<span class="material-symbols-outlined text-outline text-lg">more_horiz</span>
+</div>
+<div class="text-sm font-medium flex gap-2">
+<span class="">1 p.ngủ</span>
+<span class="text-outline">|</span>
+<span class="">1 p.tắm</span>
+<span class="text-outline">|</span>
+<span class="">35 m²</span>
+</div>
+<div class="text-xs text-on-surface-variant truncate">Lê Thánh Tôn, Bến Nghé, Quận 1, HCM</div>
+<div class="text-[10px] text-outline mt-1 uppercase font-bold tracking-tight">Niêm yết bởi: Thuê Phòng VN</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group border border-outline-variant rounded-lg overflow-hidden bg-surface-container-lowest hover:shadow-lg transition-all cursor-pointer">
+<div class="relative aspect-video overflow-hidden">
+<img alt="Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBidpj5QgKPaA9RclzEcrRHZWprXS5DgOuLtzk5TbgbefF00h0fh6X7G9TGvYoraroEk58tv_BTFyNEzP_8j9xMM9mebeY8is0d-Tnvobi8ZCx2u0KXFIzriF3k3Yl0cMlnSWe5b3RF1w_FDAh71eO39x0YESM64zD2s10X8bbue37JcG2QBJ3uhQn2D9pdEuJA8t5oE4UoxGvg_e3IZKkiDb-CoVJpq1vfBUxv9mMqcpoNVjU6uEy2rt4aeWlcBg52efm_Qs5jY6n9">
+<button class="absolute top-2 right-2 text-white hover:text-red-500 drop-shadow-md">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</button>
+</div>
+<div class="p-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold">5.5tr <span class="text-sm font-normal">/tháng</span></span>
+<span class="material-symbols-outlined text-outline text-lg">more_horiz</span>
+</div>
+<div class="text-sm font-medium flex gap-2">
+<span class="">1 p.ngủ</span>
+<span class="text-outline">|</span>
+<span class="">1 p.tắm</span>
+<span class="text-outline">|</span>
+<span class="">25 m²</span>
+</div>
+<div class="text-xs text-on-surface-variant truncate">Phan Văn Trị, Phường 11, Bình Thạnh</div>
+<div class="text-[10px] text-outline mt-1 uppercase font-bold tracking-tight">Niêm yết bởi: Master Land</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group border border-outline-variant rounded-lg overflow-hidden bg-surface-container-lowest hover:shadow-lg transition-all cursor-pointer">
+<div class="relative aspect-video overflow-hidden">
+<img alt="Vinhomes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsqqPrxzB4QTyjuQFn7Ep4VCKDvUN_182jb5tIKwJ3k6SgYVV-fqi-Xjz0yo0Aivn4usfPsDejOYzfiEk9FyIP9Fg7PxYbC0OEIyLpiEjEuOw3PaJaXrPupQgGB_hRrboH0rZMKwZrpbZwTWr2fHxp2_sZ5CsSsaU0JgwNAKehodSHFxmZLKzQg92ZD6Wj9AS9fnSMxhrhHToisVgTGrIcneakCipfeUBCstYS3fTry8aU1l47YFDxpnzILyLtDjY8PJGkqQ7Q6aIj">
+<button class="absolute top-2 right-2 text-white hover:text-red-500 drop-shadow-md">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</button>
+<div class="absolute bottom-2 left-2 bg-primary text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase">Showcase</div>
+</div>
+<div class="p-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold">12.0tr <span class="text-sm font-normal">/tháng</span></span>
+<span class="material-symbols-outlined text-outline text-lg">more_horiz</span>
+</div>
+<div class="text-sm font-medium flex gap-2">
+<span class="">2 p.ngủ</span>
+<span class="text-outline">|</span>
+<span class="">2 p.tắm</span>
+<span class="text-outline">|</span>
+<span class="">50 m²</span>
+</div>
+<div class="text-xs text-on-surface-variant truncate">Vinhomes Central Park, Bình Thạnh</div>
+<div class="text-[10px] text-outline mt-1 uppercase font-bold tracking-tight">Niêm yết bởi: Vinhomes Sales</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Action for Mobile / Quick Booking -->
+<div class="p-md bg-surface-container-lowest border-t border-outline-variant shadow-lg z-30">
+<button class="w-full bg-secondary-container text-on-primary py-3 rounded-lg font-bold flex justify-center items-center gap-sm hover:opacity-90 transition-all">
+<span class="material-symbols-outlined">calendar_month</span>
+                Đặt lịch xem phòng nhanh
+            </button>
+</div>
+</section>
+</main>
+<script>
+    // Markers animation
+    const markerButtons = document.querySelectorAll('.bg-primary, .bg-secondary-container');
+    markerButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Find relative card in real app
+            alert('Thông tin phòng giá: ' + btn.innerText);
+        });
+    });
+
+    // Handle heart icon click
+    const heartButtons = document.querySelectorAll('.material-symbols-outlined[data-icon="favorite"], .text-2xl.material-symbols-outlined');
+    heartButtons.forEach(heart => {
+        heart.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isFilled = heart.style.fontVariationSettings.includes("'FILL' 1");
+            heart.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+            heart.classList.toggle('text-red-500', !isFilled);
+        });
+    });
+</script>
+</body></html>

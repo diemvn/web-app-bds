@@ -1,0 +1,225 @@
+<!DOCTYPE html><html class="light" lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Liên hệ chính chủ - Tìm phòng</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#005049",
+                        "on-secondary-fixed": "#341100",
+                        "secondary": "#9d4300",
+                        "surface": "#f9f9ff",
+                        "outline-variant": "#c3c5d7",
+                        "tertiary-fixed": "#89f5e7",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#dce2f3",
+                        "secondary-fixed": "#ffdbca",
+                        "inverse-primary": "#b5c4ff",
+                        "surface-bright": "#f9f9ff",
+                        "surface-container": "#e7eefe",
+                        "background": "#f9f9ff",
+                        "inverse-on-surface": "#ebf1ff",
+                        "surface-tint": "#1353d8",
+                        "surface-dim": "#d3daea",
+                        "primary": "#003fb1",
+                        "on-primary-fixed": "#00174d",
+                        "primary-fixed": "#dbe1ff",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "tertiary": "#00544c",
+                        "surface-container-high": "#e2e8f8",
+                        "on-primary-container": "#d4dcff",
+                        "tertiary-fixed-dim": "#6bd8cb",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#dce2f3",
+                        "primary-fixed-dim": "#b5c4ff",
+                        "on-secondary-fixed-variant": "#783200",
+                        "surface-container-low": "#f0f3ff",
+                        "on-primary-fixed-variant": "#003dab",
+                        "on-surface-variant": "#434654",
+                        "inverse-surface": "#2a313d",
+                        "on-tertiary-container": "#84f0e2",
+                        "on-background": "#151c27",
+                        "on-tertiary-fixed": "#00201d",
+                        "secondary-fixed-dim": "#ffb690",
+                        "outline": "#737686",
+                        "tertiary-container": "#006e65",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#5c2400",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#fd761a",
+                        "primary-container": "#1a56db",
+                        "on-surface": "#151c27",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "2xl": "48px",
+                        "xs": "4px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "gutter": "24px",
+                        "3xl": "64px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9ff;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input-focus:focus {
+            border-color: #003fb1;
+            box-shadow: 0 0 0 1px #003fb1;
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- Top App Bar (Transactional State - No Nav) -->
+<header class="sticky top-0 z-50 flex items-center bg-surface dark:bg-background border-b border-outline-variant px-margin-mobile h-16 w-full max-w-container-max mx-auto">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-low transition-colors active:scale-95" onclick="history.back()">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="ml-4 text-headline-lg-mobile font-headline-lg-mobile text-on-surface">Liên hệ chính chủ</h1>
+</header>
+<main class="w-full max-w-xl mx-auto px-margin-mobile py-lg pb-32">
+<!-- Property Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_12px_rgba(0,0,0,0.05)] p-md mb-lg flex items-center gap-md border border-outline-variant/30">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A bright and spacious minimalist studio apartment in Ho Chi Minh City, featuring large windows with city views, warm wooden floors, and modern white furniture. The sunlight streams in softly, highlighting the clean lines and professional interior design style with a calm, inviting atmosphere for a young professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDACZS3PFNe5BllMJ-XyffFm4OtDPgHmfxCzcw48FS220Gk0by9LedMLSpUZSLsCpgQHrXJtetN8cpI9_yZO3Sue7B3KbQ9DMm1Vkh3WCn1S_Ng4PK3LFcXtHJ_0umnMb3YCVyvR0SYpjLPCj-ywkIn41-PbnLhNBHWOEN-A0S4EiKEv2tDAZmcKHb71h1u2z6_x1NQ8NrlaJHS0OUuSqQ5_yOwKlrq4mX6hrwUppvnSqqqAA-sFU_rbZO4fROu9d-XhQqlcS3RkdhE">
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-label-md font-label-md text-secondary">Hồ Chí Minh, Quận 1</p>
+<h2 class="text-title-lg font-title-lg text-on-surface line-clamp-1">Phòng studio cao cấp gần Bến Thành</h2>
+<p class="text-primary font-bold text-body-lg">8.500.000đ/tháng</p>
+</div>
+</div>
+<!-- Booking Form -->
+<section class="bg-surface-container-lowest rounded-xl p-lg shadow-[0px_4px_12px_rgba(0,0,0,0.05)] border border-outline-variant/30">
+<h3 class="text-title-lg font-title-lg mb-md text-on-surface">Thông tin của bạn</h3>
+<form class="space-y-lg" id="bookingForm" onsubmit="handleFormSubmit(event)">
+<div class="space-y-base">
+<label class="text-label-md font-label-md text-on-surface-variant block">Họ và tên</label>
+<input class="w-full h-12 px-md rounded-lg border border-outline-variant bg-surface focus:outline-none form-input-focus text-body-md" placeholder="Nhập họ và tên..." required="" type="text">
+</div>
+<div class="space-y-base">
+<label class="text-label-md font-label-md text-on-surface-variant block">Số điện thoại</label>
+<input class="w-full h-12 px-md rounded-lg border border-outline-variant bg-surface focus:outline-none form-input-focus text-body-md" placeholder="Nhập số điện thoại..." required="" type="tel">
+</div>
+<div class="grid grid-cols-2 gap-md">
+<div class="space-y-base">
+<label class="text-label-md font-label-md text-on-surface-variant block">Ngày hẹn</label>
+<input class="w-full h-12 px-md rounded-lg border border-outline-variant bg-surface focus:outline-none form-input-focus text-body-md" required="" type="date">
+</div>
+<div class="space-y-base">
+<label class="text-label-md font-label-md text-on-surface-variant block">Giờ hẹn</label>
+<input class="w-full h-12 px-md rounded-lg border border-outline-variant bg-surface focus:outline-none form-input-focus text-body-md" required="" type="time">
+</div>
+</div>
+<div class="space-y-base">
+<label class="text-label-md font-label-md text-on-surface-variant block">Lời nhắn (Tùy chọn)</label>
+<textarea class="w-full p-md rounded-lg border border-outline-variant bg-surface focus:outline-none form-input-focus text-body-md resize-none" rows="4">Tôi muốn xem phòng này vào lúc...</textarea>
+</div>
+<!-- Primary CTA Fixed at bottom for mobile, inline for desktop -->
+<div class="pt-md md:static">
+<button class="w-full h-14 bg-secondary-container hover:bg-secondary transition-all active:scale-95 text-white font-bold text-body-lg rounded-xl shadow-lg flex items-center justify-center gap-sm" type="submit">
+<span class="material-symbols-outlined">send</span>
+                        Gửi yêu cầu
+                    </button>
+</div>
+</form>
+<!-- Success Message Placeholder -->
+<div class="hidden mt-lg p-md bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-lg flex items-center gap-md border border-tertiary animate-pulse" id="successMessage">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="text-label-md font-label-md">Yêu cầu đã được gửi thành công! Chủ phòng sẽ sớm liên hệ lại với bạn.</p>
+</div>
+</section>
+<!-- Alternative Contact Options -->
+<div class="mt-xl text-center">
+<p class="text-label-md font-label-md text-on-surface-variant mb-md">Hoặc liên hệ nhanh qua</p>
+<div class="flex justify-center gap-xl">
+<a class="flex flex-col items-center gap-base active:opacity-70" href="#">
+<div class="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-md">
+<span class="material-symbols-outlined text-[32px]">chat</span>
+</div>
+<span class="text-label-sm font-label-sm">Zalo</span>
+</a>
+<a class="flex flex-col items-center gap-base active:opacity-70" href="#">
+<div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center text-white shadow-md">
+<span class="material-symbols-outlined text-[32px]">call</span>
+</div>
+<span class="text-label-sm font-label-sm">Gọi điện</span>
+</a>
+</div>
+</div>
+</main>
+<!-- Bottom Bar for mobile focus (redundant with submit, but good for visibility if page is long) -->
+<div class="md:hidden fixed bottom-0 left-0 w-full p-margin-mobile bg-surface-container-lowest border-t border-outline-variant flex items-center gap-md z-40">
+<button class="flex-1 h-12 bg-secondary-container text-white font-bold rounded-lg shadow-md active:scale-95 transition-transform" onclick="document.getElementById('bookingForm').requestSubmit()">
+            Gửi yêu cầu ngay
+        </button>
+</div>
+<script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button[type="submit"]');
+            const success = document.getElementById('successMessage');
+            
+            // Visual feedback
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">refresh</span> Đang gửi...';
+            btn.disabled = true;
+            btn.classList.add('opacity-50');
+
+            setTimeout(() => {
+                btn.classList.add('hidden');
+                success.classList.remove('hidden');
+                success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 1500);
+        }
+    </script>
+</body></html>

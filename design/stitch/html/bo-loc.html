@@ -1,0 +1,257 @@
+<!DOCTYPE html><html class="light" lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-tertiary-fixed-variant": "#005049",
+                  "on-secondary-fixed": "#341100",
+                  "secondary": "#9d4300",
+                  "surface": "#f9f9ff",
+                  "outline-variant": "#c3c5d7",
+                  "tertiary-fixed": "#89f5e7",
+                  "surface-container-lowest": "#ffffff",
+                  "error": "#ba1a1a",
+                  "surface-variant": "#dce2f3",
+                  "secondary-fixed": "#ffdbca",
+                  "inverse-primary": "#b5c4ff",
+                  "surface-bright": "#f9f9ff",
+                  "surface-container": "#e7eefe",
+                  "background": "#f9f9ff",
+                  "inverse-on-surface": "#ebf1ff",
+                  "surface-tint": "#1353d8",
+                  "surface-dim": "#d3daea",
+                  "primary": "#003fb1",
+                  "on-primary-fixed": "#00174d",
+                  "primary-fixed": "#dbe1ff",
+                  "on-error-container": "#93000a",
+                  "on-error": "#ffffff",
+                  "tertiary": "#00544c",
+                  "surface-container-high": "#e2e8f8",
+                  "on-primary-container": "#d4dcff",
+                  "tertiary-fixed-dim": "#6bd8cb",
+                  "on-secondary": "#ffffff",
+                  "surface-container-highest": "#dce2f3",
+                  "primary-fixed-dim": "#b5c4ff",
+                  "on-secondary-fixed-variant": "#783200",
+                  "surface-container-low": "#f0f3ff",
+                  "on-primary-fixed-variant": "#003dab",
+                  "on-surface-variant": "#434654",
+                  "inverse-surface": "#2a313d",
+                  "on-tertiary-container": "#84f0e2",
+                  "on-background": "#151c27",
+                  "on-tertiary-fixed": "#00201d",
+                  "secondary-fixed-dim": "#ffb690",
+                  "outline": "#737686",
+                  "tertiary-container": "#006e65",
+                  "on-primary": "#ffffff",
+                  "on-secondary-container": "#5c2400",
+                  "error-container": "#ffdad6",
+                  "secondary-container": "#fd761a",
+                  "primary-container": "#1a56db",
+                  "on-surface": "#151c27",
+                  "on-tertiary": "#ffffff"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "2xl": "48px",
+                  "xs": "4px",
+                  "container-max": "1280px",
+                  "margin-mobile": "16px",
+                  "lg": "24px",
+                  "md": "16px",
+                  "gutter": "24px",
+                  "3xl": "64px",
+                  "xl": "32px",
+                  "sm": "8px",
+                  "base": "4px"
+          },
+          "fontFamily": {
+                  "headline-md": ["Inter"],
+                  "body-md": ["Inter"],
+                  "title-lg": ["Inter"],
+                  "label-sm": ["Inter"],
+                  "headline-lg-mobile": ["Inter"],
+                  "display-lg": ["Inter"],
+                  "body-lg": ["Inter"],
+                  "headline-lg": ["Inter"],
+                  "label-md": ["Inter"]
+          },
+          "fontSize": {
+                  "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                  "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                  "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                  "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                  "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                  "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                  "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                  "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                  "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #f9f9ff;
+      color: #151c27;
+      font-family: 'Inter', sans-serif;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .range-slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 6px;
+      background: #dce2f3;
+      border-radius: 3px;
+      outline: none;
+    }
+    .range-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 24px;
+      height: 24px;
+      background: #003fb1;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 4px solid white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .safe-bottom {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+  </style>
+</head>
+<body class="bg-surface">
+<!-- Header: Search & Filter -->
+<header class="sticky top-0 z-50 bg-surface dark:bg-background border-b border-outline-variant flex items-center justify-between px-margin-mobile h-16 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-low transition-all active:scale-95">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile text-primary">Bộ lọc</h1>
+</div>
+<button class="text-label-md font-label-md text-primary font-bold">Xóa tất cả</button>
+</header>
+<main class="max-w-md mx-auto px-margin-mobile pb-32 pt-6">
+<!-- Section: Khu vực -->
+<section class="mb-8">
+<h2 class="text-title-lg font-title-lg mb-4 text-on-surface">Khu vực</h2>
+<div class="relative mb-4">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-lowest border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-body-md font-body-md" placeholder="Nhập khu vực, quận huyện..." type="text">
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 bg-primary-fixed text-on-primary-fixed rounded-full text-label-md font-label-md transition-colors hover:bg-primary hover:text-on-primary">Cầu Giấy</button>
+<button class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full text-label-md font-label-md transition-colors hover:bg-outline-variant">Thanh Xuân</button>
+<button class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full text-label-md font-label-md transition-colors hover:bg-outline-variant">Đống Đa</button>
+<button class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full text-label-md font-label-md transition-colors hover:bg-outline-variant">Nam Từ Liêm</button>
+</div>
+</section>
+<!-- Section: Khoảng giá -->
+<section class="mb-8">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-title-lg font-title-lg text-on-surface">Khoảng giá</h2>
+<span class="text-primary font-bold text-body-md">1tr - 20tr+</span>
+</div>
+<div class="px-2">
+<input class="range-slider" max="21" min="1" type="range" value="10">
+<div class="flex justify-between mt-4 text-label-sm font-label-sm text-outline">
+<span>1tr</span>
+<span>5tr</span>
+<span>10tr</span>
+<span>15tr</span>
+<span>20tr+</span>
+</div>
+</div>
+</section>
+<!-- Section: Diện tích -->
+<section class="mb-8">
+<h2 class="text-title-lg font-title-lg mb-4 text-on-surface">Diện tích</h2>
+<div class="flex gap-3 overflow-x-auto scrollbar-hide -mx-margin-mobile px-margin-mobile">
+<button class="flex-shrink-0 px-6 py-2 border-2 border-primary bg-primary-fixed text-primary font-bold rounded-xl text-label-md font-label-md">Dưới 20m²</button>
+<button class="flex-shrink-0 px-6 py-2 border border-outline-variant bg-surface-container-lowest text-on-surface-variant rounded-xl text-label-md font-label-md">20 - 30m²</button>
+<button class="flex-shrink-0 px-6 py-2 border border-outline-variant bg-surface-container-lowest text-on-surface-variant rounded-xl text-label-md font-label-md">30 - 50m²</button>
+<button class="flex-shrink-0 px-6 py-2 border border-outline-variant bg-surface-container-lowest text-on-surface-variant rounded-xl text-label-md font-label-md">Trên 50m²</button>
+</div>
+</section>
+<!-- Section: Loại phòng -->
+<section class="mb-8">
+<h2 class="text-title-lg font-title-lg mb-4 text-on-surface">Loại phòng</h2>
+<div class="space-y-3">
+<label class="flex items-center justify-between p-4 bg-surface-container-lowest border border-outline-variant rounded-xl cursor-pointer active:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">home_work</span>
+<span class="text-body-md font-body-md">Phòng trọ</span>
+</div>
+<input checked="" class="w-6 h-6 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox">
+</label>
+<label class="flex items-center justify-between p-4 bg-surface-container-lowest border border-outline-variant rounded-xl cursor-pointer active:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">apartment</span>
+<span class="text-body-md font-body-md">Chung cư mini</span>
+</div>
+<input class="w-6 h-6 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox">
+</label>
+<label class="flex items-center justify-between p-4 bg-surface-container-lowest border border-outline-variant rounded-xl cursor-pointer active:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">domain</span>
+<span class="text-body-md font-body-md">Căn hộ</span>
+</div>
+<input class="w-6 h-6 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox">
+</label>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom CTA -->
+<div class="fixed bottom-0 left-0 w-full p-4 bg-surface dark:bg-background border-t border-outline-variant safe-bottom z-50 shadow-[0px_-8px_24px_rgba(0,0,0,0.05)]">
+<div class="max-w-md mx-auto">
+<button class="w-full py-4 bg-secondary-container hover:bg-secondary text-on-secondary font-bold text-body-lg rounded-2xl transition-all active:scale-[0.98] shadow-lg shadow-secondary-container/20">
+        Xem kết quả (120 phòng)
+      </button>
+</div>
+</div>
+<!-- Navigation Shell (Suppressed based on Task-Focused rule, but for demo completeness of UI kit we maintain the logic structure if needed. However, the requirement says "suppress the navigation shell if the page intent is Task-Focused... any sub-page featuring a Back action". So we hide it to prioritize the Filter canvas.) -->
+<script>
+    // Micro-interaction for range slider visual feedback
+    const slider = document.querySelector('.range-slider');
+    if (slider) {
+      slider.addEventListener('input', (e) => {
+        const val = e.target.value;
+        const text = val >= 21 ? '20tr+' : `${val}tr`;
+        // In a real app, update the price range display here
+      });
+    }
+
+    // Ripple effect simulation for buttons
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        let x = e.clientX - e.target.offsetLeft;
+        let y = e.clientY - e.target.offsetTop;
+        
+        let ripples = document.createElement('span');
+        ripples.style.left = x + 'px';
+        ripples.style.top = y + 'px';
+        // (Visual feedback only)
+      });
+    });
+  </script>
+</body></html>
