@@ -52,5 +52,56 @@
         .map-gradient {
             background: radial-gradient(circle at 50% 50%, #f0f3ff 0%, #dce2f3 100%);
         }
+
+        /* Taste-Skill Utilities */
+        .taste-container {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @media (min-width: 768px) {
+            .taste-container { padding-left: 1.5rem; padding-right: 1.5rem; }
+        }
+        @media (min-width: 1024px) {
+            .taste-container { padding-left: 2rem; padding-right: 2rem; }
+        }
+
+        .taste-section {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        @media (min-width: 768px) {
+            .taste-section { padding-top: 6rem; padding-bottom: 6rem; }
+        }
+        @media (min-width: 1024px) {
+            .taste-section { padding-top: 8rem; padding-bottom: 8rem; }
+        }
+
+        .taste-headline {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            letter-spacing: -0.05em;
+            font-weight: 700;
+        }
+        @media (min-width: 768px) {
+            .taste-headline { font-size: 2.25rem; line-height: 2.5rem; }
+        }
+        @media (min-width: 1024px) {
+            .taste-headline { font-size: 3rem; line-height: 1; }
+        }
+
+        .taste-body {
+            font-size: 1rem;
+            line-height: 1.625;
+            color: #434654; /* on-surface-variant */
+            max-width: 65ch;
+        }
+
+        .tactile-feedback:active {
+            transform: scale(0.98);
+            transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
     </style>
 @include('components.stitch.motion-styles')

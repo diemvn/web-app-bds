@@ -50,7 +50,11 @@
                     "secondary-container": "#fd761a",
                     "primary-container": "#1a56db",
                     "on-surface": "#151c27",
-                    "on-tertiary": "#ffffff"
+                    "on-tertiary": "#ffffff",
+                    "cta-primary": "#fd761a",
+                    "cta-secondary": "#f0f3ff",
+                    "text-muted": "#737686",
+                    "text-heading": "#151c27"
             },
             "borderRadius": {
                     "DEFAULT": "0.25rem",
@@ -67,6 +71,8 @@
                     "md": "16px",
                     "gutter": "24px",
                     "3xl": "64px",
+                    "4xl": "96px",
+                    "5xl": "128px",
                     "xl": "32px",
                     "sm": "8px",
                     "base": "4px"
@@ -77,7 +83,8 @@
                     "title-lg": ["Inter"],
                     "label-sm": ["Inter"],
                     "headline-lg-mobile": ["Inter"],
-                    "display-lg": ["Inter"],
+                    "display-xl": ["DM Sans", "Inter"],
+                    "display-lg": ["DM Sans", "Inter"],
                     "body-lg": ["Inter"],
                     "headline-lg": ["Inter"],
                     "label-md": ["Inter"]
@@ -86,8 +93,10 @@
                     "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
                     "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
                     "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
                     "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
                     "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
                     "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
                     "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
                     "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],

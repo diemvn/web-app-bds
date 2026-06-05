@@ -64,4 +64,29 @@ class ListingMapController extends Controller
             ]),
         ]);
     }
+
+    public function byIds(Request $request)
+    {
+        $ids = explode(',', $request->ids);
+        if (empty($ids)) {
+            return response()->json(['data' => []]);
+        }
+
+        $listings = Listing::whereIn('id', $ids)
+            ->published()
+            ->with('room.building')
+            ->get();
+
+        return response()->json([
+            'data' => $listings->map(fn (Listing $l) => [
+                'id' => $l->id,
+                'slug' => $l->slug,
+                'title' => $l->title,
+                'price' => $l->price,
+                'area' => $l->area_m2 ?? $l->room?->area_m2,
+                'image' => $l->thumbnail,
+                'location' => ($l->room?->building?->district ?? '').', '.($l->room?->building?->city ?? 'TP.HCM'),
+            ])
+        ]);
+    }
 }
