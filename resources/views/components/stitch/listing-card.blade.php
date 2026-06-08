@@ -1,4 +1,4 @@
-@props(['listing', 'badge' => null])
+@props(['listing', 'badge' => null, 'layout' => 'vertical'])
 
 @php
     $priceMillion = number_format($listing->price / 1_000_000, 1, ',', '.');
@@ -17,8 +17,54 @@
         }
         return 'check_circle';
     };
+    
+    // Simulate bedrooms based on area for the mockup
+    $bedrooms = $listing->area_m2 > 30 ? 2 : 1; 
 @endphp
 
+@if($layout === 'horizontal')
+<article class="stitch-card group flex flex-row bg-surface rounded-2xl overflow-hidden shadow-sm border border-outline-variant/30 h-[120px] tactile-feedback cursor-pointer hover:bg-surface-container-lowest transition-colors">
+    <a href="{{ route('listing.show', $listing->slug ?? 'slug') }}" class="block relative w-[120px] flex-none bg-surface-container">
+        @if($listing->thumbnail_url)
+            <img src="{{ $listing->thumbnail_url }}" 
+                 alt="{{ $listing->title }}" 
+                 class="w-full h-full object-cover" 
+                 loading="lazy">
+        @else
+            <div class="w-full h-full flex items-center justify-center text-on-surface-variant bg-surface-variant">
+                <span class="material-symbols-outlined text-[32px] opacity-50">image</span>
+            </div>
+        @endif
+        
+        @if($badge === 'verified')
+            <div class="absolute top-2 left-2 bg-surface/90 backdrop-blur-md px-1.5 py-0.5 rounded flex items-center shadow-sm z-10">
+                <span class="material-symbols-outlined text-primary text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+            </div>
+        @endif
+    </a>
+    
+    <div class="flex flex-col flex-1 p-3 min-w-0 justify-between">
+        <div>
+            <h3 class="font-bold text-on-surface text-sm line-clamp-1 group-hover:text-primary transition-colors">
+                <a href="{{ route('listing.show', $listing->slug ?? 'slug') }}">{{ $listing->title }}</a>
+            </h3>
+            
+            <div class="text-xs text-on-surface-variant mt-1">
+                {{ $listing->area_m2 }} m² | {{ $bedrooms }} p.ngủ
+            </div>
+            
+            <div class="flex items-center gap-1 text-xs text-on-surface-variant mt-1 truncate">
+                <span class="material-symbols-outlined text-[14px]">location_on</span>
+                <span class="truncate">{{ $listing->room?->building?->district ?? 'TP.HCM' }}, HCM</span>
+            </div>
+        </div>
+        
+        <div class="font-bold text-primary text-sm mt-1">
+            {{ $priceMillion }}tr/tháng
+        </div>
+    </div>
+</article>
+@else
 <article class="stitch-card group flex flex-col bg-surface-container-lowest rounded-[20px] overflow-hidden property-card-shadow h-full">
     <a href="{{ route('listing.show', $listing->slug ?? 'slug') }}" class="block relative aspect-[4/3] overflow-hidden bg-surface-container">
         @if($listing->thumbnail_url)
@@ -109,3 +155,4 @@
         </div>
     </div>
 </article>
+@endif

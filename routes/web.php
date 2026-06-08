@@ -28,6 +28,18 @@ Route::post('/dang-xuat', [AuthController::class, 'logout'])
 
 // === Public Pages ===
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/opt1', function () {
+    $listings = \App\Models\Listing::with(['room.building'])->paginate(12);
+    return view('public.home-opt1', ['listings' => $listings, 'seo' => \App\Support\SeoData::forHome()]);
+});
+Route::get('/opt2', function () {
+    $listings = \App\Models\Listing::with(['room.building'])->paginate(12);
+    return view('public.home-opt2', ['listings' => $listings, 'seo' => \App\Support\SeoData::forHome()]);
+});
+Route::get('/opt3', function () {
+    $listings = \App\Models\Listing::with(['room.building'])->paginate(12);
+    return view('public.home-opt3', ['listings' => $listings, 'seo' => \App\Support\SeoData::forHome()]);
+});
 Route::get('/bo-loc', [FilterController::class, 'index'])->name('filters');
 Route::get('/tim-phong', [MapController::class, 'index'])->name('map.index');
 Route::get('/phong/{slug}', [ListingController::class, 'show'])->name('listing.show');
